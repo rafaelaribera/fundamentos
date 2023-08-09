@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   float a,b, suma, resta, mult, divi;
+   cout<<"Ingrese el primer numero: "<<endl;
+   cin>>a;
+   
+   cout<<"Ingrese el segundo numero: "<<endl;
+   cin>>b;
+   
+   suma= a+b;
+   cout<<"La suma es "<<suma<<endl;
+   
+   resta=a-b;
+   cout<<"La resta es "<<resta<<endl;
+   
+   mult=a*b;
+   cout<<"La multiplicacion es "<<endl;
+   
+   divi=a/b;
+   cout<<"La division es "<<divi<<endl;
+   
+   
+   return 0;
+   
+   
+   
+   
+  
+}
