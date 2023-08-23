@@ -1,0 +1,42 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    float A, B, C, calculo1, calculo2,x;
+    double discriminante;
+    
+    
+    cout<<"Ingrese el termino cuadratico: ";
+    cin>>A;
+    
+    cout<<"Ingrese el  termino lineal:";
+    cin>>B;
+    
+    cout<<"Ingrese el término independiente: ";
+    cin>>C;
+    
+    calculo1=4*A*C;
+    calculo2=pow(B,2);
+    discriminante=calculo2-calculo1;
+    
+    
+    if (discriminante==0)
+        {
+            x=(-B+discriminante)/(2*A);
+            cout<<"La solución unica es: "<<x;
+        
+        }
+     
+     
+    else {
+        
+
+         cout<<"La ecuacion tiene mas de una solucion ";
+     
+        }
+ 
+
+    return 0;
+}
