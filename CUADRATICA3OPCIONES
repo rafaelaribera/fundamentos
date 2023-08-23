@@ -1,0 +1,72 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+     float A, B, C, calculo1, calculo2, calculo3;
+    double raiz,x1,x2,xR,xi;
+    
+    
+    cout<<"Ingrese el termino cuadratico: ";
+    cin>>A;
+    
+    if(A==0)
+    { cout<<"no valido";
+    }
+    
+    else 
+    {
+    
+    cout<<"Ingrese el  termino lineal:";
+    cin>>B;
+    
+    cout<<"Ingrese el término independiente: ";
+    cin>>C;
+    
+    calculo1=4*A*C;
+    calculo2=pow(B,2);
+    calculo3=calculo2-calculo1;
+    raiz=sqrt(calculo3);
+    
+  
+
+    
+    if (calculo3<0)
+        {xR = -B/ (2*A);
+        xi = sqrt(-calculo3) /(2*A); 
+        cout<<"solucion imaginaria 1= "<<xR<< "+"<< xi<<"i"<<endl;
+        cout<< "solucion imaginaria 2= "<<xR<< "-"<< xi<<"i"<<endl;
+        }
+     
+     
+    else if(calculo3>0)
+        
+        {
+          
+        x1= (-B+raiz) /(2*A);
+ 
+    
+          x2= (-B-raiz)/(2*A);
+         cout<<"La primera solución a la ecuación es "<<x1<<endl;
+     
+         cout<<"La segunda solución a la ecuación es "<<x2;
+        }
+    
+    else if (calculo3==0)
+        { 
+            
+              
+             x1= (-B+raiz) /(2*A);
+ 
+
+          cout<<"La solución unica es "<<x1;
+         
+    
+        }
+    
+    
+
+    return 0;
+    }
+}
