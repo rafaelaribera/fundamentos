@@ -22,9 +22,10 @@ int main()
         case 2: r=a-b; break;
         case 3: r=a*b; break;
         case 4: r=a/b; break;
+        cout<<"El resultado es "<<r;
         default: cout<<"Ingrese una opcion valida"; break;
     }
     
-    cout<<"El resultado es "<<r;
+
     return 0;
 }
