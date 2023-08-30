@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   float cantidad, valor,precio;
+   int item;
+
+    cout<<"Ingrese la cantidad: ";
+    cin>>cantidad;
+   
+    cout<<"MENU"<<endl;
+    cout<<"1. Hamburguesas 3bs"<<endl;
+    cout<<"2. Hamburguesa con queso 5bs "<<endl; 
+    cout<<"3. Papas fritas 2bs"<<endl;
+    cout<<"4. Soda 2.5bs"<<endl;
+    cout<<"¿Qué item desea pedir? (1-4)";
+    cin>>item;
+        switch (item)
+        { case 1:
+            valor=3;
+            break;
+         case 2:
+            valor=5;
+            break;
+        case 3:
+            valor=2;
+            break;
+        case 4:
+            valor =2.5;
+            break;
+            
+        default: cout<<"Opcion invalida";
+        
+        }
+    
+    if( 1<=item && item>=4 )
+     {
+        precio=cantidad*item;
+        cout<<"El precio es "<<precio;
+     } 
+}
