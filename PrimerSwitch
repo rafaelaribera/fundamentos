@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    float a,b,r;
+    int opcion;
+    cout<<"Ingrese el primer numero: ";
+    cin>>a;
+    cout<<"Ingrese el segundo numero: ";
+    cin>>b;
+    cout<<"OPCIONES"<<endl;
+    cout<<"1.Suma"<<endl;
+    cout<<"2.Resta"<<endl;
+    cout<<"3.Multipliacion"<<endl;
+    cout<<"4.Division"<<endl;
+    cout<<"Elige una opcion(1-4): ";
+    cin>>opcion;
+    switch(opcion)
+    {
+        case 1: r=a+b; break;
+        case 2: r=a-b; break;
+        case 3: r=a*b; break;
+        case 4: r=a/b; break;
+        default: cout<<"Ingrese una opcion valida"; break;
+    }
+    
+    cout<<"El resultado es "<<r;
+    return 0;
+}
