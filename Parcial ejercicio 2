@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float zapatos,precio,pagototal,descuento,pago;
+    precio=100;
+    cout<<"Ingrese la cantidad de pares que comprara: "<<endl;
+    cin>>zapatos;
+    pagototal=precio*zapatos;
+    if (zapatos>=3)
+    descuento=pagototal*0.3;
+    else 
+    descuento=pagototal*0.05;
+    
+    pago=pagototal-descuento;
+    
+    cout<<"El total a pagar es: BS "<<pago<<endl;
+
+    return 0;
+}
