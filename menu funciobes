@@ -1,0 +1,82 @@
+// ConsoleApplication1.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+//
+//RAFAELA RIBERA
+#include <iostream>
+using namespace std;
+
+string clasletras (char r);
+int sumadigitos(int a, int b);
+int factorial(int n);
+
+int main()
+{
+    int n, continuar, n1, n2, num;
+    char letra;
+    do {
+        cout << "----------------MENU---------------------" << endl;
+        cout << "1. Clasificacion de letras" << endl;
+        cout << "2. Suma de 2 numeros" << endl;
+        cout << "3. Calculadora de factorial" << endl;
+        do {
+            cout << "¿Que operacion deseas calcular?(1-3)" << endl;
+            cin >> n;
+        } while (n < 1 || n>3);
+
+        switch (n)
+        {
+
+        case 1: { cout << "Ingrese la letra: ";
+            cin >> letra;
+            cout << "La letra " << letra << " es " << clasletras(letra) << endl;
+            cout << "Desea continuar? (1=si, 0=no) :";
+            cin >> continuar;
+        } break;
+
+        case 2: { cout << "Ingrese n1:";
+            cin >> n1;
+            cout << "Ingrese n2:";
+            cin >> n2;
+            cout << "La suma es " << sumadigitos(n1, n2) << endl;
+            cout << "Desea continuar? (1=si, 0=no) :";
+            cin >> continuar;
+        } break;
+
+        case 3: { cout << "Ingresen el nro para calcular el factorial: ";
+            cin >> num;
+            cout << num << "!=" << factorial(num) << endl;
+            cout << "Desea continuar? (1=si, 0=no) :";
+            cin >> continuar;
+        }
+        }
+
+    } while (continuar == 1);
+    }
+string clasletras (char r)
+{   
+    string respuesta;
+    if (r == 'a' || r == 'e' || r == 'i' || r == 'o' || r == 'u')
+    {
+        respuesta = "vocal";
+    }
+    else
+        respuesta = "consonante";
+
+    return respuesta;
+}
+
+int sumadigitos(int a, int b)
+{
+    return a + b;
+}
+
+int factorial(int n)
+{
+    int fact = 1;
+        for (int i = 1; i <= n; i++)
+        {
+            fact = fact * i;
+
+         }
+    return fact;
+
+}
