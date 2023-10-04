@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int factorial(int n);
+
+int main()
+{
+    int n;
+    cout << "-----------------CALCULADORA DE FACTORIAL---------------------" << endl;
+    do {
+    cout << "Ingrese un numero: ";
+    cin >> n;
+    } while (n <= 0);
+
+        cout << n << "!=" << factorial(n);
+}
+
+int factorial(int n)
+{   
+    int mult = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        mult = mult * i;
+    }
+    return mult;
+}
