@@ -1,0 +1,112 @@
+// ConsoleApplication1.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+//
+//RAFAELA RIBERA
+#include <iostream>
+using namespace std;
+
+int Digito(int n);
+int sumadigitos(int n);
+
+int main()
+{
+    int n;
+    cout << "-----------------SUMA DE DIGITOS---------------------" << endl;
+    do {
+    cout << "Ingrese un numero: ";
+    cin >> n;
+    } while (n <= 0);
+
+    cout << "La suma de los digitos es " << sumadigitos(n);
+}
+
+int Digito(int n)
+{   
+    return n%10;
+}
+
+int sumadigitos(int n)
+{
+    int dig;
+    int suma = 0;
+    while (n > 0)
+    {   
+        dig = Digito(n);
+        suma = suma + dig;
+        n = n / 10;
+    }
+    return suma;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+
+
+
+
+
+
+
+
+
+
+
