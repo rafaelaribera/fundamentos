@@ -1,0 +1,85 @@
+#include <iostream>
+using namespace std;
+
+#define MAX_PRODUCTOS  100
+
+
+void agregarVenta(string productos[], double ventas[], int& totalProductos);
+void mostrarVentas( string productos[], const double ventas[], int totalProductos);
+double calcularVentasTotales(double ventas[], int totalProductos);
+
+int main() {
+    string productos[MAX_PRODUCTOS];
+    double ventas[MAX_PRODUCTOS];
+    int totalProductos = 0, c;
+    char continuar;
+    double ventasTotales;
+    string producto;
+    double venta;
+    do {
+        do {
+            cout << "Ingrese el nombre del producto: ";
+            cin >> producto;
+
+
+            do {
+                cout << "Ingrese la venta realizada: ";
+                cin >> venta;
+                if (venta < 0) {
+                    cout << "La venta no puede ser negativa. Intente nuevamente." << endl;
+                }
+            } while (venta < 0);
+
+            productos[totalProductos] = producto;
+            ventas[totalProductos] = venta;
+            totalProductos++;
+
+            cout << "¿Desea ingresar otra venta? (S/N): ";
+            cin >> continuar;
+        } while (continuar == 'S' || continuar == 's');
+
+
+        mostrarVentas(productos, ventas, totalProductos);
+
+        ventasTotales = calcularVentasTotales(ventas, totalProductos);
+        cout << "Ventas totales realizadas: $" << ventasTotales << endl;
+        cout << "Presione 0 para seguir registrando: ";
+        cin >> c;
+    } while (c == 0);
+    return 0;
+}
+
+void agregarVenta(string productos[], double ventas[], int& totalProductos) {
+    string producto;
+    double venta;
+
+    cout << "Ingrese el nombre del producto: ";
+    cin >> producto;
+
+    do {
+        cout << "Ingrese la venta realizada: ";
+        cin >> venta;
+        if (venta < 0) {
+            cout << "La venta no puede ser negativa. Intente nuevamente." << endl;
+        }
+    } while (venta < 0);
+
+    productos[totalProductos] = producto;
+    ventas[totalProductos] = venta;
+    totalProductos++;
+}
+
+void mostrarVentas( string productos[], const double ventas[], int totalProductos) {
+    cout << "Registro de ventas:" << endl;
+    for (int i = 0; i < totalProductos; i++) {
+        cout << "Producto: " << productos[i] << ", Venta: $" << ventas[i] << endl;
+    }
+}
+
+double calcularVentasTotales( double ventas[], int totalProductos) {
+    double total = 0;
+    for (int i = 0; i < totalProductos; i++) {
+        total += ventas[i];
+    }
+    return total;
+}
